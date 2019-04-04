@@ -7,28 +7,47 @@
    
     <body>
         <script>
-            //описание функции
-            function MyFunction(){
-                alert("Hello Vlad!");
+            
+            function AcceptSize(){
+                 var size =0;
+                 
+                 do{
+                     size = prompt("размер?");
+                     
+                 }while(size < 1);
+                 
+               return parseInt(size); 
             }
-            //при вызове функция вернет из себя возраст
-            // -- функция с возращаемым значением --
-            function MyFunctionReturn(){
-                var age = prompt("Сколько тебе лет?", "18");
+            
+            
+            function CreateArray(size)
+            {
+                var arr = new Array(parseInt(size));
+                return arr;
+            }
+            
+            
+            function FillArray(arr, size)
+            {
+                for ( var i = 0; i < size; i++ ){
+                    arr[i] = prompt ( "введите число" );
+                    
+                }
                 
-                return age;
-            }
-            //функция выводит на экран 2х переданных в нее чисел
-            function PlusFunction(x,y){
-                alert(x + " + " + y + " = " + (parseInt(x) + parseInt(y)));
+                return arr;
             }
             
             
-            //alert(MyFunctionReturn());
+            function  ShowArray(arr)
+            {
+                alert(arr);
+            }
             
             
-            PlusFunction(5,3);
-            PlusFunction(5312,3213);
+            var size = AcceptSize();
+            var mss = FillArray(CreateArray(size), size);
+            ShowArray(mss);
+            
         </script>
         
     </body>
