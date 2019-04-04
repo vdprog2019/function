@@ -11,40 +11,24 @@
             function MyFunction(){
                 alert("Hello Vlad!");
             }
-            
-            
-            function MyArr(){
-                var size = 4;
-                var arr = new Array(size);
-                for (var i = 0; i < size; i++ ){
-               
-                arr[i] = prompt ("введите число"); 
-            }
-            
-                alert(arr);
-            }
-            /*
-            var size = 4
-            var arr = new Array(size);
-            
+            //при вызове функция вернет из себя возраст
+            // -- функция с возращаемым значением --
+            function MyFunctionReturn(){
+                var age = prompt("Сколько тебе лет?", "18");
                 
-            for (var i = 0; i < size; i++ ){
-               
-                arr[i] = prompt ("введите число"); 
+                return age;
+            }
+            //функция выводит на экран 2х переданных в нее чисел
+            function PlusFunction(x,y){
+                alert(x + " + " + y + " = " + (parseInt(x) + parseInt(y)));
             }
             
-            alert(arr);
-           
-*/
             
-           
-            //вызов функции (выполнение кода внутри функции)
-            MyFunction();
-            MyArr();
-            MyArr();
-            MyArr();
-            MyArr();
-         
+            //alert(MyFunctionReturn());
+            
+            
+            PlusFunction(5,3);
+            PlusFunction(5312,3213);
         </script>
         
     </body>
