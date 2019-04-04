@@ -44,9 +44,24 @@
             }
             
             
+            function MaxNumberInArray(arr, size)
+            {
+                var max = 0;
+                for ( var i = 0; i < size; i++ ){
+                     if (max < arr[i]){
+                         max = arr[i];
+                          
+                        }
+                }
+                return max;
+            }
+            
+            
             var size = AcceptSize();
             var mss = FillArray(CreateArray(size), size);
             ShowArray(mss);
+           
+            alert( MaxNumberInArray(mss, size));
             
         </script>
         
